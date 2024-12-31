@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nombre": "David",
+    "apellidos": "Torrenegra Gomez",
+    "fechaDeNacimiento": "1990-05-15",
+    "correo": "david.torrenegra@gmail.com",
+    "contraseña": "12345670"
+  },
+  {
+    "id": 2,
+    "nombre": "Ana",
+    "apellidos": "Martínez Pérez",
+    "fechaDeNacimiento": "1985-03-22",
+    "correo": "ana.martinez@example.com",
+    "contraseña": "abcd1234"
+  },
+  {
+    "id": 3,
+    "nombre": "Carlos",
+    "apellidos": "González López",
+    "fechaDeNacimiento": "1992-07-10",
+    "correo": "carlos.gonzalez@example.com",
+    "contraseña": "password123"
+  },
+  {
+    "id": 4,
+    "nombre": "Laura",
+    "apellidos": "Sánchez Ruiz",
+    "fechaDeNacimiento": "1988-12-01",
+    "correo": "laura.sanchez@example.com",
+    "contraseña": "laura2020"
+  },
+  {
+    "id": 5,
+    "nombre": "Juan",
+    "apellidos": "Fernández González",
+    "fechaDeNacimiento": "1995-06-18",
+    "correo": "juan.fernandez@example.com",
+    "contraseña": "juan1234"
+  },
+  {
+    "id": 6,
+    "nombre": "Maria",
+    "apellidos": "Lopez Martínez",
+    "fechaDeNacimiento": "1991-09-08",
+    "correo": "maria.lopez@example.com",
+    "contraseña": "maria9876"
+  },
+  {
+    "id": 7,
+    "nombre": "Pedro",
+    "apellidos": "Hernández Pérez",
+    "fechaDeNacimiento": "1994-11-25",
+    "correo": "pedro.hernandez@example.com",
+    "contraseña": "pedro1234"
+  }
+]

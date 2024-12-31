@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tramitar Solicitudes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar {
+        margin-bottom: 20px;
+      }
+      .hero {
+        background: #f8f9fa;
+        padding: 30px 15px;
+        text-align: center;
+      }
+      .card {
+        margin: 15px 0;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f8f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Servicios Legales</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tramites">Trámites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <h1>Bienvenido a Servicios Legales</h1>
+      <p>Tramita tus solicitudes de manera rápida y sencilla.</p>
+    </section>
+
+    <!-- Services Section -->
+    <div class="container" id="servicios">
+      <h2 class="text-center">Nuestros Servicios</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Consultas Jurídicas</h5>
+              <p class="card-text">
+                Recibe orientación profesional para tus asuntos legales.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Gestión de Casos</h5>
+              <p class="card-text">
+                Accede a la información sobre tus casos activos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Trámites en Línea</h5>
+              <p class="card-text">Inicia trámites sin salir de casa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Procedures Section -->
+    <div class="container" id="tramites">
+      <h2 class="text-center">Tramitar Solicitudes</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Tu nombre completo"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="service" class="form-label">Tipo de Solicitud</label>
+          <select class="form-control" id="service" required>
+            <option value="">Selecciona una opción</option>
+            <option value="consulta">Consulta Jurídica</option>
+            <option value="caso">Gestión de Caso</option>
+            <option value="tramite">Trámite Legal</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Descripción</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="4"
+            placeholder="Describe tu solicitud"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+      </form>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" id="contacto">
+      <h2 class="text-center">Contáctanos</h2>
+      <p class="text-center">
+        Para más información, comunícate con nosotros a través de nuestro
+        formulario de contacto o llama al <strong>+1 800 123 456</strong>.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Servicios Legales. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

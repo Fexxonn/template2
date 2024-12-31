@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login y Registro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+        margin: 0;
+      }
+      .form-container {
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-header h2 {
+        margin-bottom: 5px;
+      }
+      .switch-link {
+        text-align: center;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container" id="login-form">
+      <div class="form-header">
+        <h2>Iniciar Sesión</h2>
+        <p>Accede a tu cuenta</p>
+      </div>
+      <form>
+        <div class="mb-3">
+          <label for="login-email" class="form-label">Correo Electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="login-email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="login-password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="login-password"
+            placeholder="Tu contraseña"
+            required
+          />
+        </div>
+        <button type="submit" id="LoginBtn" class="btn btn-primary w-100">
+          Iniciar Sesión
+        </button>
+      </form>
+      <div class="switch-link">
+        <p>
+          ¿No tienes cuenta? <a href="#" id="show-register">Regístrate aquí</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-container d-none" id="register-form">
+      <div class="form-header">
+        <h2>Registro</h2>
+        <p>Crea una nueva cuenta</p>
+      </div>
+      <form>
+        <div class="mb-3">
+          <label for="register-name" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="register-name"
+            placeholder="Nombres"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="register-name" class="form-label">Apellidos</label>
+          <input
+            type="text"
+            class="form-control"
+            id="register-name"
+            placeholder="Apellidos completos"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="register-name" class="form-label">Fecha de nacimiento</label>
+          <input
+            type="datetime"
+            class="form-control"
+            id="register-name"
+            placeholder="Fecha de nacimiento"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="register-email" class="form-label"
+            >Correo Electrónico</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="register-email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="register-password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="register-password"
+            placeholder="Crea una contraseña"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+      </form>
+      <div class="switch-link">
+        <p>
+          ¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión aquí</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const loginForm = document.getElementById("login-form");
+      const registerForm = document.getElementById("register-form");
+      const showRegister = document.getElementById("show-register");
+      const showLogin = document.getElementById("show-login");
+
+      showRegister.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginForm.classList.add("d-none");
+        registerForm.classList.remove("d-none");
+      });
+
+      showLogin.addEventListener("click", (e) => {
+        e.preventDefault();
+        registerForm.classList.add("d-none");
+        loginForm.classList.remove("d-none");
+      });
+
+      const loginBtn = document.getElementById("LoginBtn");
+      const loginEmail = document.getElementById("login-email");
+      const loginPassword = document.getElementById("login-password");
+
+      loginBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (
+          loginEmail.value === "admin@gmail.com" &&
+          loginPassword.value === "admin"
+        ) {
+          window.location.replace("./Admin.html");
+        } else if (
+          loginEmail.value === "client@gmail.com" &&
+          loginPassword.value === "client"
+        ) {
+          window.location.replace("./Client.html");
+        } else {
+          loginForm.classList.add("d-none");
+          registerForm.classList.remove("d-none");
+        }
+      });
+    </script>
+  </body>
+</html>
